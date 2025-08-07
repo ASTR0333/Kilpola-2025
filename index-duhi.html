@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тропа Духов: Карельские Тени</title>
+    <link rel="stylesheet" href="styles-duhi.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Тропа Духов: Карельские Тени</h1>
+        <div id="stats">
+            <div>Гнев духов: <span id="anger">0</span>/5</div>
+            <div>Подношения: <span id="offerings">0</span></div>
+        </div>
+        <div id="story-text">
+            Ты заблудился в карельских лесах. Туман сгущается, а тропа ведёт тебя вглубь древних преданий...
+            Впереди мелькнула тень. Кто-то наблюдает за тобой.
+        </div>
+        <div id="choices">
+            <button onclick="makeChoice(1)">Идти вперёд</button>
+            <button onclick="makeChoice(2)">Осмотреться (поискать подношения)</button>
+            <button onclick="makeChoice(3)">Аккуратно позвать на помощь</button>
+        </div>
+        <button id="continue-btn" class="hidden" onclick="continueGame()">▶ Продолжить</button>
+        <button id="restart-btn" onclick="restartGame()">⟳ Начать заново</button>
+    </div>
+    <script src="script-duhi.js"></script>
+</body>
+</html>

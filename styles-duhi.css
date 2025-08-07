@@ -1,0 +1,117 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    color: #f0e6d2;
+    line-height: 1.6;
+    background: linear-gradient(rgba(10, 30, 10, 0.7), rgba(5, 15, 5, 0.9)), 
+                url('les.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+#game-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(20, 30, 20, 0.85);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+    border: 1px solid #3a5a3a;
+}
+
+h1 {
+    color: #c9b37e;
+    text-align: center;
+    border-bottom: 2px solid #3a5a3a;
+    padding-bottom: 15px;
+    font-family: 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+#story-text {
+    margin: 25px 0;
+    min-height: 150px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgba(30, 40, 30, 0.3);
+    border-left: 3px solid #3a5a3a;
+    font-size: 1.1em;
+}
+
+#choices {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+button {
+    background-color: #2a3a2a;
+    color: #f0e6d2;
+    border: 1px solid #3a5a3a;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: left;
+    border-radius: 5px;
+    font-family: 'Georgia', serif;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #3a5a3a;
+    transform: translateX(5px);
+    box-shadow: 0 0 10px rgba(100, 150, 100, 0.5);
+}
+
+button:disabled {
+    background-color: #2a2a2a;
+    color: #666;
+    cursor: not-allowed;
+    transform: none;
+    border-color: #333;
+}
+
+#stats {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #c9b37e;
+    padding: 10px;
+    background-color: rgba(30, 40, 30, 0.5);
+    border-radius: 5px;
+}
+
+#restart-btn {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #5a1a1a;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    border: 1px solid #7a2a2a;
+}
+
+#restart-btn:hover {
+    background-color: #7a2a2a;
+}
+
+#continue-btn {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #1a3a5a;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #2a4a6a;
+}
+
+#continue-btn:hover {
+    background-color: #2a4a6a;
+}
+
+.hidden {
+    display: none;
+}

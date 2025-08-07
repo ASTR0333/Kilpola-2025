@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.modern-app {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-button {
+    padding: 12px 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-button:hover {
+    color: #3498db;
+}
+
+.tab-button.active {
+    color: #3498db;
+    border-bottom: 3px solid #3498db;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#pattern-tab h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#pattern-tab .subtitle {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.toolbar {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    border: 1px solid #ddd;
+}
+
+.tools, .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button.active {
+    background-color: #2ecc71;
+    color: white;
+}
+
+#color-picker {
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+#brush-size {
+    width: 100px;
+    cursor: pointer;
+    accent-color: #3498db;
+}
+
+.canvas-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+#drawing-canvas {
+    display: block;
+    background-color: #ffffff;
+    cursor: crosshair;
+    width: 100%;
+}
+
+#kalitka-tab {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#kalitka-tab h1 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+#kalitka-tab .subtitle {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+.empty-space {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 100px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.empty-space p {
+    color: #7f8c8d;
+    font-size: 18px;
+    margin: 0;
+}
+
+@media (max-width: 850px) {
+    .toolbar {
+        flex-direction: column;
+    }
+    
+    .tools, .actions {
+        justify-content: center;
+    }
+    
+    .empty-space {
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab-button {
+        width: 100%;
+        text-align: center;
+    }
+    
+    #pattern-tab h1, #kalitka-tab h1 {
+        font-size: 24px;
+    }
+}

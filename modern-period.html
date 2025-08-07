@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Современный период</title>
+    <link rel="stylesheet" href="modern-style.css">
+</head>
+<body>
+    <div class="modern-app">
+        <div class="theme-switcher" style="display: none;">
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle" checked>
+                <span class="slider round"></span>
+            </label>
+            <span id="theme-label">Светлый режим</span>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="pattern-tab">Игра "Нарисуй узор"</button>
+            <button class="tab-button" data-tab="kalitka-tab">Игра "Тапалка интернета"</button>
+        </div>
+
+        <div id="pattern-tab" class="tab-content active">
+            <h1>Нарисуйте узор</h1>
+            <p class="subtitle">Создайте уникальный узор, который символизирует современный период Кильполы</p>
+            
+            <div class="toolbar">
+                <div class="tools">
+                    <button id="pencil" class="active">Карандаш</button>
+                    <button id="brush">Кисть</button>
+                    <button id="fill">Заливка</button>
+                    <button id="eraser">Ластик</button>
+                    <input type="color" id="color-picker" value="#000000">
+                    <input type="range" id="brush-size" min="1" max="50" value="5">
+                    <span id="size-value">5px</span>
+                </div>
+                <div class="actions">
+                    <button id="clear">Очистить</button>
+                    <button id="save">Сохранить PNG</button>
+                </div>
+            </div>
+            
+            <div class="canvas-container">
+                <canvas id="drawing-canvas" width="800" height="600"></canvas>
+            </div>
+        </div>
+
+        <div id="kalitka-tab" class="tab-content">
+            <h1>Тапалка интернета</h1>
+            <p class="subtitle"></p>
+            <div class="empty-space">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="modern-script.js"></script>
+</body>
+</html>
