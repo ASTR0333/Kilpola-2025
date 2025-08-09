@@ -1,0 +1,246 @@
+body {
+    font-family: 'Arial', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f5f0;
+    overflow-x: hidden;
+    background-image: url('https://example.com/karelia-pattern.png'); /* Добавьте карельский узор */
+    background-attachment: fixed;
+}
+
+h1 {
+    color: #2a4d2e;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.timeline-container {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d1e0d1;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 50px;
+    padding: 0 15px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    height: 4px;
+    background: linear-gradient(to right, #3a6b3f, #5d9e64);
+    top: 120px;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dates-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    margin-top: 120px;
+    padding: 0 10px;
+}
+
+.date {
+    color: #2a4d2e;
+    padding: 8px 0;
+    position: relative;
+    text-align: center;
+    width: 110px;
+    font-size: 14px;
+    background: #f8fbf8;
+    border-radius: 6px;
+    margin-top: -12px;
+    box-shadow: 0 0 0 3px #f8fbf8;
+    font-weight: bold;
+    border: 1px solid #d1e0d1;
+}
+
+.date::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #3a6b3f;
+    border-radius: 50%;
+    left: 50%;
+    top: 18px;
+    transform: translateX(-50%);
+    z-index: 3;
+    border: 2px solid #f8fbf8;
+    box-shadow: 0 0 0 2px #3a6b3f;
+}
+
+.slots-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 50px;
+    padding: 0 10px;
+}
+
+.slot {
+    width: 120px;
+    height: 90px;
+    background: rgba(58, 107, 63, 0.08);
+    border: 2px dashed #3a6b3f;
+    border-radius: 10px;
+    margin: 0 5px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slot.highlight {
+    background: rgba(92, 158, 100, 0.2);
+    border-color: #5d9e64;
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+    padding: 15px;
+    max-width: 100%;
+}
+
+.event {
+    background: #f8fbf8;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: move;
+    border-left: 5px solid #3a6b3f;
+    transition: all 0.3s;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    max-height: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 15px;
+    color: #2a4d2e;
+}
+
+.event:hover {
+    background: #e8f3e8;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.event.in-slot {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left-width: 4px;
+    padding: 10px;
+}
+
+.feedback {
+    text-align: center;
+    margin: 25px 0;
+    font-weight: bold;
+    min-height: 28px;
+    font-size: 18px;
+    clear: both;
+    color: #3a6b3f;
+}
+
+.correct-feedback {
+    color: #2e7d32;
+}
+
+.incorrect-feedback {
+    color: #c62828;
+}
+
+.buttons-container {
+    text-align: center;
+    margin-top: 25px;
+    clear: both;
+}
+
+button {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    background: #3a6b3f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: #2a4d2e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .date {
+        width: 80px;
+        font-size: 12px;
+    }
+    
+    .slot {
+        width: 80px;
+        height: 110px;
+    }
+    
+    .event {
+        width: 160px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .date {
+        width: 60px;
+        font-size: 10px;
+        padding: 6px 0;
+    }
+    
+    .slot {
+        width: 60px;
+        height: 130px;
+    }
+    
+    .event {
+        width: 130px;
+        font-size: 12px;
+        padding: 10px;
+    }
+    
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
