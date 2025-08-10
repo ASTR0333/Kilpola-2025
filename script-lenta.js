@@ -97,23 +97,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (this.firstChild) {
                     const existingEvent = this.firstChild;
                     if (originalSlot) {
+                        // Move existing event to original slot
                         originalSlot.appendChild(existingEvent);
                         existingEvent.classList.add('in-slot');
                     } else {
+                        // Move existing event back to events container
                         eventsContainer.appendChild(existingEvent);
                         existingEvent.classList.remove('in-slot');
                     }
+                } else if (originalSlot) {
+                    // Clear original slot if moving from slot to empty slot
+                    originalSlot.innerHTML = '';
                 }
                 
                 // Move dragged event to new slot
-                this.innerHTML = '';
                 this.appendChild(draggedEvent);
                 draggedEvent.classList.add('in-slot');
-                
-                // If was in another slot, clear it
-                if (originalSlot && originalSlot !== this) {
-                    originalSlot.innerHTML = '';
-                }
             });
         });
 

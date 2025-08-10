@@ -5,7 +5,7 @@ body {
     padding: 20px;
     background-color: #f0f5f0;
     overflow-x: hidden;
-    background-image: url('https://example.com/karelia-pattern.png'); /* Добавьте карельский узор */
+    background-image: url('https://example.com/karelia-pattern.png');
     background-attachment: fixed;
 }
 
@@ -33,12 +33,12 @@ h1 {
 }
 
 .timeline-line {
-    position: absolute;
+    position: relative;
     left: 15px;
     right: 15px;
     height: 4px;
     background: linear-gradient(to right, #3a6b3f, #5d9e64);
-    top: 120px;
+    top: 160px;
     z-index: 1;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -75,7 +75,7 @@ h1 {
     background: #3a6b3f;
     border-radius: 50%;
     left: 50%;
-    top: 18px;
+    top: 40px;
     transform: translateX(-50%);
     z-index: 3;
     border: 2px solid #f8fbf8;
