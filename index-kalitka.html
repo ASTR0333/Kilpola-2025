@@ -3,23 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калитка - сбор ягод</title>
+    <title>Калитка - Остров Кильпола</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-common.css">
     <link rel="stylesheet" href="styles-kalitka.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="game-info">
-        <div id="score">Ягоды: 0</div>
-        <div id="lives"></div>
-    </div>
-    <canvas id="gameCanvas"></canvas>
-    
-    <div id="startScreen">
+    <header>
+        <div class="logo-container">
+            <img src="ostrov.png" alt="Логотип" class="logo">
+        </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="index-statii.html">Статьи</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Игры</a>
+                <div class="dropdown-content">
+                    <a href="index-duhi.html">Тропа Духов</a>
+                    <a href="index-lenta.html">История Кильполы</a>
+                    <a href="index-uzori.html">Узор современности</a>
+                    <a href="index-kalitka.html" class="active">Калитка</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="game-container">
         <h1>Калитка - сбор ягод</h1>
-        <p>Собирай ягоды для карельских пирогов!</p>
-        <p>Используй стрелки ← → для перемещения</p>
-        <button id="startButton">Начать игру</button>
+        <p class="subtitle">Собирай ягоды для карельских пирогов!</p>
+        
+        <div class="game-info">
+            <div id="score">Ягоды: 0</div>
+            <div id="lives"></div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="startScreen">
+            <h1>Калитка - сбор ягод</h1>
+            <p>Собирай ягоды для карельских пирогов!</p>
+            
+            <div class="berries-info">
+                <div class="berry-type">
+                    <img src="brusnika.png" alt="Брусника" class="berry-image">
+                    <p>Брусника - съедобная (+1 очко)</p>
+                </div>
+                <div class="berry-type">
+                    <img src="kringownik.png" alt="Крыжовник" class="berry-image">
+                    <p>Крыжовник - съедобная (+1 очко)</p>
+                </div>
+                <div class="berry-type">
+                    <img src="smorodina.png" alt="Смородина" class="berry-image">
+                    <p>Смородина - съедобная (+1 очко)</p>
+                </div>
+                <div class="berry-type poisonous">
+                    <img src="poisonberry.png" alt="Волчья ягода" class="berry-image">
+                    <p>Волчья ягода - ядовитая (-1 жизнь)</p>
+                </div>
+            </div>
+            
+            <p>Используй стрелки ← → для перемещения</p>
+            <button id="startButton" class="game-button">Начать игру</button>
+        </div>
     </div>
 
     <script src="script-kalitka.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

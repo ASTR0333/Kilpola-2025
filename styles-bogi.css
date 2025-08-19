@@ -1,0 +1,96 @@
+
+        /* Специфичные стили для страницы богов */
+        .spirit-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .spirit-section h2 {
+            color: #2a4d2e;
+            font-size: 28px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .spirit-container {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        
+        .spirit-text {
+            flex: 2;
+            min-width: 0;
+        }
+        
+        .spirit-image-container {
+            flex: 1;
+            min-width: 300px;
+            position: sticky;
+            top: 20px;
+        }
+        
+        .spirit-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            border: 1px solid #ddd;
+        }
+        
+        .offering {
+            background-color: #f0f7f0;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-style: italic;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .warning-note {
+            background-color: #ffebee;
+            border-left: 4px solid #c62828;
+            padding: 18px;
+            margin: 25px 0;
+            color: #c62828;
+            font-size: 16px;
+        }
+        
+        .spirit-card {
+            margin-bottom: 40px;
+        }
+        
+        .spirit-card h3 {
+            color: #3a6b3f;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .spirit-card p {
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        
+        @media (max-width: 768px) {
+            .spirit-container {
+                flex-direction: column;
+            }
+            
+            .spirit-image-container {
+                min-width: 100%;
+                order: -1;
+                margin-bottom: 25px;
+            }
+            
+            .spirit-text {
+                width: 100%;
+            }
+        }

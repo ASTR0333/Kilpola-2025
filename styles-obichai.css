@@ -1,0 +1,91 @@
+
+        /* Специфичные стили для страницы обычаев */
+        .custom-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .custom-section h2 {
+            color: #2a4d2e;
+            font-size: 28px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .custom-container {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        
+        .custom-text {
+            flex: 2;
+            min-width: 0;
+        }
+        
+        .custom-image-container {
+            flex: 1;
+            min-width: 300px;
+            position: sticky;
+            top: 20px;
+        }
+        
+        .custom-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            border: 1px solid #ddd;
+
+        }
+        
+        .quote {
+            font-style: italic;
+            color: #555;
+            border-left: 3px solid #3a6b3f;
+            padding-left: 20px;
+            margin: 25px 0;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .tradition-card {
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-left: 4px solid #3a6b3f;
+        }
+        
+        .tradition-card h3 {
+            color: #3a6b3f;
+            margin-top: 0;
+            font-size: 22px;
+        }
+        
+        .tradition-card p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #444;
+        }
+        
+        @media (max-width: 768px) {
+            .custom-container {
+                flex-direction: column;
+            }
+            
+            .custom-image-container {
+                min-width: 100%;
+                order: -1;
+                margin-bottom: 25px;
+            }
+            
+            .custom-text {
+                width: 100%;
+            }
+        }

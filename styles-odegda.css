@@ -1,0 +1,147 @@
+/* Основные стили */
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.clothing-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Увеличенный текст для костюмов */
+.expandable-section .text-content p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Особый стиль для вводного раздела */
+.intro-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Раскрывающиеся секции */
+.expandable-section {
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.section-header {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.section-header h2 {
+    font-size: 22px;
+    color: #2a4d2e;
+    margin: 0;
+}
+
+.section-header:hover {
+    background-color: #f8f8f8;
+}
+
+.arrow-icon {
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.section-content {
+    display: none;
+    padding: 0 25px 25px;
+}
+
+.expandable-section.active .section-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.expandable-section.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Расположение контента */
+.text-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.image-content {
+    flex: 0 0 35%;
+    margin-top: 10px;
+}
+
+.image-content img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Особый стиль для обуви */
+.shoes-images {
+    flex: 0 0 35%;
+    display: flex;
+    gap: 15px;
+}
+
+.shoe-left, .shoe-right {
+    width: 48%;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 0 15px;
+    }
+    
+    .expandable-section.active .section-content {
+        flex-direction: column;
+    }
+    
+    .expandable-section .text-content p {
+        font-size: 17px;
+    }
+    
+    .image-content, .shoes-images {
+        width: 100%;
+        flex: 1;
+        margin-top: 20px;
+    }
+    
+    .shoes-images {
+        justify-content: space-between;
+    }
+    
+    .shoe-left, .shoe-right {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .shoes-images {
+        flex-direction: column;
+    }
+    
+    .shoe-left, .shoe-right {
+        width: 100%;
+    }
+    
+    .expandable-section .text-content p {
+        font-size: 16px;
+    }
+}

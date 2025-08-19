@@ -1,0 +1,171 @@
+/* Общие стили для всех игр */
+body {
+    background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    height: 100px;
+    width: 100  px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2a4d2e;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0px 15px;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    background-color: #f0f7f0;
+    transform: translateY(-2px);
+}
+
+.game-container {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    min-height: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+h1 {
+    color: #2a4d2e;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+button, .game-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3a6b3f;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+button:hover, .game-button:hover {
+    background-color: #2a4d2e;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+button.active {
+    background-color: #2e7d32;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .game-container {
+        margin: 0 20px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .subtitle {
+        font-size: 15px;
+    }
+    
+    nav a {
+        font-size: 15px;
+        padding: 0px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 15px;
+        margin: 0 10px 20px;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+    }
+    
+    nav {
+        gap: 10px;
+    }
+    
+    nav a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    
+    button, .game-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

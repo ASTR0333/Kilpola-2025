@@ -1,0 +1,70 @@
+
+        /* Специфичные стили для страницы рецептов */
+        .recipe-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .recipe-section h2 {
+            color: #2a4d2e;
+            font-size: 28px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .recipe-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 4px solid #3a6b3f;
+        }
+        
+        .recipe-card h3 {
+            color: #3a6b3f;
+            margin-top: 0;
+            font-size: 24px;
+        }
+        
+        .recipe-image {
+            width: 303.66px;
+            height: 300.74px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+        }
+        
+        .ingredients {
+            background-color: #f0f7f0;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        
+        .ingredients h4 {
+            margin-top: 0;
+            color: #2a4d2e;
+        }
+        
+        .instructions {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .recipe-grid {
+                grid-template-columns: 1fr;
+            }
+        }

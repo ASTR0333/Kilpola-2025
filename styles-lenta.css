@@ -1,29 +1,6 @@
-body {
-    font-family: 'Arial', sans-serif;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f0f5f0;
-    overflow-x: hidden;
-    background-image: url('https://example.com/karelia-pattern.png');
-    background-attachment: fixed;
-}
-
-h1 {
-    color: #2a4d2e;
-    text-align: center;
-    margin-bottom: 15px;
-    font-family: 'Georgia', serif;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-
-.timeline-container {
+/* Специфичные стили для Истории Карелии */
+.timeline-game {
     margin-top: 30px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border: 1px solid #d1e0d1;
 }
 
 .timeline {
@@ -59,12 +36,12 @@ h1 {
     text-align: center;
     width: 110px;
     font-size: 14px;
-    background: #f8fbf8;
+    background: white;
     border-radius: 6px;
     margin-top: -12px;
-    box-shadow: 0 0 0 3px #f8fbf8;
-    font-weight: bold;
-    border: 1px solid #d1e0d1;
+    box-shadow: 0 0 0 3px white;
+    font-weight: 600;
+    border: 1px solid #ddd;
 }
 
 .date::after {
@@ -78,7 +55,7 @@ h1 {
     top: 40px;
     transform: translateX(-50%);
     z-index: 3;
-    border: 2px solid #f8fbf8;
+    border: 2px solid white;
     box-shadow: 0 0 0 2px #3a6b3f;
 }
 
@@ -119,7 +96,7 @@ h1 {
 }
 
 .event {
-    background: #f8fbf8;
+    background: white;
     padding: 15px;
     border-radius: 10px;
     cursor: move;
@@ -142,7 +119,7 @@ h1 {
 }
 
 .event:hover {
-    background: #e8f3e8;
+    background: #f8f8f8;
     transform: translateY(-3px);
     box-shadow: 0 5px 12px rgba(0,0,0,0.15);
 }
@@ -161,7 +138,7 @@ h1 {
 .feedback {
     text-align: center;
     margin: 25px 0;
-    font-weight: bold;
+    font-weight: 600;
     min-height: 28px;
     font-size: 18px;
     clear: both;
@@ -176,32 +153,10 @@ h1 {
     color: #c62828;
 }
 
-.buttons-container {
+.game-buttons {
     text-align: center;
     margin-top: 25px;
     clear: both;
-}
-
-button {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 25px;
-    background: #3a6b3f;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-button:hover {
-    background: #2a4d2e;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 @media (max-width: 768px) {
@@ -237,10 +192,5 @@ button:hover {
         width: 130px;
         font-size: 12px;
         padding: 10px;
-    }
-    
-    button {
-        padding: 10px 15px;
-        font-size: 14px;
     }
 }

@@ -4,27 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тропа Духов: Карельские Тени</title>
+    <link rel="stylesheet" href="styles-common.css">
     <link rel="stylesheet" href="styles-duhi.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="game-container">
+    <header>
+        <div class="logo-container">
+            <img src="ostrov.png" alt="Логотип" class="logo">
+        </div>
+        <nav>
+            <a href="index.html" class="active">Главная</a>
+            <a href="index-statii.html">Статьи</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Игры</a>
+                <div class="dropdown-content">
+                    <a href="index-duhi.html">Тропа Духов</a>
+                    <a href="index-lenta.html">История Кильполы</a>
+                    <a href="index-uzori.html">Узор современности</a>
+                    <a href="index-kalitka.html">Калитка</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="game-container">
         <h1>Тропа Духов: Карельские Тени</h1>
-        <div id="stats">
+        <p class="subtitle">Пройдите через лес, умилостивив духов подношениями</p>
+        
+        <div class="game-stats">
             <div>Гнев духов: <span id="anger">0</span>/5</div>
             <div>Подношения: <span id="offerings">0</span></div>
         </div>
-        <div id="story-text">
-            Ты заблудился в карельских лесах. Туман сгущается, а тропа ведёт тебя вглубь древних преданий...
-            Впереди мелькнула тень. Кто-то наблюдает за тобой.
+        
+        <div class="story-text" id="story-text">
+            <!-- Текст игры будет здесь -->
         </div>
-        <div id="choices">
-            <button onclick="makeChoice(1)">Идти вперёд</button>
-            <button onclick="makeChoice(2)">Осмотреться (поискать подношения)</button>
-            <button onclick="makeChoice(3)">Аккуратно позвать на помощь</button>
+        
+        <div class="choices" id="choices">
+            <!-- Кнопки выбора будут здесь -->
         </div>
-        <button id="continue-btn" class="hidden" onclick="continueGame()">▶ Продолжить</button>
-        <button id="restart-btn" onclick="restartGame()">⟳ Начать заново</button>
+        
+        <button id="continue-btn" class="hidden game-button">▶ Продолжить</button>
+        <button id="restart-btn" class="game-button" onclick="restartGame()">⟳ Начать заново</button>
     </div>
+    
     <script src="script-duhi.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
